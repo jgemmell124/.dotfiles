@@ -32,3 +32,4 @@ let &t_SI = "\e[5 q"
 " everything else"
 let &t_EI = "\e[1 q"
 
+color elflord
