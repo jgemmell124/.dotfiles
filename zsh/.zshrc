@@ -12,7 +12,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # ZSH_THEME="jonathan"
 #ZSH_THEME="fletcherm"
 #ZSH_THEME="candy"
-ZSH_THEME="af-magic"
+#ZSH_THEME="af-magic"
 ZSH_THEME="essembeh"
 
 
@@ -79,7 +79,9 @@ alias nv="nvim"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
+
 # git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions#
+
 plugins=(
     git
 #    zsh-autosuggestions
