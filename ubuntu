@@ -19,6 +19,12 @@ chmod u+x $HOME/nvim.appimage
 sudo mv $HOME/squashfs-root /
 sudo ln -s $HOME/squashfs-root/AppRun /usr/bin/nvim
 
+# update to most recent nodejs
+sudo npm cache clean -f
+sudo npm install -g n
+sudo n stable
+sudo n latest
+
 # Install packer for nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
