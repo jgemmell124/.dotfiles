@@ -31,7 +31,7 @@ git clone --depth 1 https://github.com/wbthomason/packer.nvim\
 
 # stow everything
 if [[ -z $STOW_FOLDERS ]]; then
-	STOW_FOLDERS="nvim,zsh,tmux"
+	STOW_FOLDERS="nvim,zsh,tmux,bin"
 fi
 
 if [[ -z $DOTFILES ]]; then
