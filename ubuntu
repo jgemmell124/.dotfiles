@@ -19,6 +19,8 @@ chmod u+x $HOME/nvim.appimage
 sudo mv $HOME/squashfs-root /
 sudo ln -s $HOME/squashfs-root/AppRun /usr/bin/nvim
 
+sudo apt-get install ripgrep
+
 # update to most recent nodejs
 sudo npm cache clean -f
 sudo npm install -g n
