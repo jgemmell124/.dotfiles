@@ -1,6 +1,6 @@
 #!/usr/bin/env 	zsh
 
-DOWNLOADS="git,zip,nodejs,npm,python,gcc,stow,tmux"
+DOWNLOADS="zip,python,ripgrep,gcc,stow,tmux"
 
 for package in $(echo $DOWNLOADS | sed "s/,/ /g")
 do
@@ -11,7 +11,7 @@ done
 # install zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
 
-# Install nvim
+# Install latest release of nvim
 curl -Lo $HOME/nvim.appimage https://github.com/neovim/neovim/releases/download/nightly/nvim.appimage 
 chmod u+x $HOME/nvim.appimage
 # $HOME/nvim.appimage
@@ -19,21 +19,13 @@ chmod u+x $HOME/nvim.appimage
 sudo mv $HOME/squashfs-root /
 sudo ln -s $HOME/squashfs-root/AppRun /usr/bin/nvim
 
-sudo apt-get install ripgrep
-
-# update to most recent nodejs
-sudo npm cache clean -f
-sudo npm install -g n
-sudo n stable
-sudo n latest
-
 # Install packer for nvim
 git clone --depth 1 https://github.com/wbthomason/packer.nvim\
  ~/.local/share/nvim/site/pack/packer/start/packer.nvim
 
 # stow everything
 if [[ -z $STOW_FOLDERS ]]; then
-	STOW_FOLDERS="nvim,zsh,tmux,bin"
+	STOW_FOLDERS="nvim,zsh,tmux,bin,vim"
 fi
 
 if [[ -z $DOTFILES ]]; then
