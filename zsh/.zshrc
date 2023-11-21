@@ -15,6 +15,17 @@ export ZSH="$HOME/.oh-my-zsh"
 #ZSH_THEME="af-magic"
 ZSH_THEME="essembeh"
 
+function cd() {
+  if [[ -d ./venv ]] ; then
+    deactivate
+  fi
+
+  builtin cd $1
+
+  if [[ -d ./venv ]] ; then
+    . ./venv/bin/activate
+  fi
+}
 
 # Custom aliases
 alias nv="nvim"
