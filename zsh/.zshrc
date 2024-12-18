@@ -11,11 +11,11 @@ alias python=python3
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 # ZSH_THEME="robbyrussell"
 # ZSH_THEME="jonathan"
-ZSH_THEME="fletcherm"
+# ZSH_THEME="fletcherm"
 # ZSH_THEME="candy"
 # ZSH_THEME="af-magic"
 # # favorite vvv
-# ZSH_THEME="essembeh"
+ZSH_THEME="essembeh"
 # ZSH_THEME="lukerandall"
 
 function cd() {
@@ -136,6 +136,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 
-export ANDROID_HOME=$HOME/Android/Sdk
-export PATH=$PATH:$ANDROID_HOME/emulator
+export ANDROID_HOME=/opt/android
+export PATH=$PATH:$ANDROID_HOME/cmdline-tools/latest/bin
 export PATH=$PATH:$ANDROID_HOME/platform-tools
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+source <(fzf --zsh)
